@@ -1,0 +1,17 @@
+mixin tourItem(image, price, tittle, review, reviewCount, Duration, tourPrice)
+  .tour
+        .tour-top
+          img.tour-image(src= image , alt="This-is-image")
+          span.tour-price= price 
+            .tour-content
+              h3.tour-title= tittle 
+              .tour-rating
+                .tour-review
+                  .tour-star
+                    img(src='./images/star.png', alt='tour-rating')
+                  .tour-review-count
+                    span= review 
+                        |  (#{reviewCount} reviews)
+                span.tour-duration Duration: #{Duration} 
+              a.tour-button(href='https://www.facebook.com/dv.hngoa/', target='_blank', rel='noopener norefferer') Tours Price $#{tourPrice}
+
